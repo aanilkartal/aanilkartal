@@ -47,3 +47,4 @@ def Ters(x):
     return x
 print (Ters(lst))
 
+
