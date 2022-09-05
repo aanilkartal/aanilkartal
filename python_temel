@@ -1,0 +1,49 @@
+#ilk proje 
+
+lst = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+def vvv_lst(x):
+    a=0
+    b=0
+    nlst=[]
+    for i in lst:
+        if type(lst[a])==list and len(lst[a])!=1:
+            for j in lst[a]:
+                if type(lst[a][b]) == list and len(lst[a][b]) != 1:
+                    nlst.append (lst[a][b])
+                    b=b+1
+                elif type(lst[a][b]) == int or type(lst[a][b]) == str:
+                    nlst.append (lst[a][b])
+                    b=b+1
+                elif type(lst[a][b]) ==list:
+                    for k in lst[a][b]:
+                        if type(lst[a][b])==list:
+                            if type(lst[a][b][0])==str:
+                                nlst.append (lst[a][b][0])
+                            elif type (lst[a][b][0]) == list:
+                                if type(lst[a][b][0])== list:
+                                    nlst.append (lst[a][b][0][0])
+                    b=b+1
+            a=a+1
+            b=0
+        elif type(lst[a])==int or len(lst[a])==1:
+            nlst.append (lst[a])
+            a=a+1
+    return (nlst)
+
+print (vvv_lst(lst))
+
+
+
+
+
+
+#ikinci proje
+lst = [[1,2], [3,4], [5,6,7]]
+
+def Ters(x):
+    x.reverse()
+    for i in x:
+        i.reverse()
+    return x
+print (Ters(lst))
+
